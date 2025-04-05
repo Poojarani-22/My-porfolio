@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+</head>
+<body>
+  <header>
+    <h1>Contact Me</h1>
+    <nav>
+      <a href="C:\Users\pooja\OneDrive\Desktop\protfolio\My Porfolio.html">Home</a>
+    </nav>
+  </header>
+
+  <section>
+    <form action="#" method="post">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label>Purpose:</label><br>
+      <input type="radio" id="feedback" name="purpose" value="Feedback" required onclick="showRating(true)">
+      <label for="feedback">Feedback</label><br>
+
+      <input type="radio" id="inquiry" name="purpose" value="Inquiry" onclick="showRating(false)">
+      <label for="inquiry">Inquiry</label><br>
+
+      <input type="radio" id="other" name="purpose" value="Other" onclick="showRating(false)">
+      <label for="other">Other</label><br><br>
+
+      <div id="rating-section" style="display: none;">
+        <label>Rate Your Experience (1 - 5):</label><br>
+        <input type="radio" name="rating" value="1"> 1
+        <input type="radio" name="rating" value="2"> 2
+        <input type="radio" name="rating" value="3"> 3
+        <input type="radio" name="rating" value="4"> 4
+        <input type="radio" name="rating" value="5"> 5
+        <br><br>
+      </div>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="4" cols="40" required></textarea><br><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My Portfolio</p>
+  </footer>
+
+  <!-- JavaScript to show/hide rating -->
+  <script>
+    function showRating(show) {
+      document.getElementById("rating-section").style.display = show ? "block" : "none";
+    }
+  </script>
+</body>
+</html>
